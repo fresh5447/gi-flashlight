@@ -1,4 +1,5 @@
-import { default as envalid, num, str } from 'envalid'
+const envalid = require('envalid');
+const { num, str } = envalid;
 
 const LOG_LEVELS = [ 'debug', 'info', 'warn', 'error' ];
 
