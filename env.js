@@ -1,5 +1,6 @@
-const envalid = require('envalid');
-const { num, str } = envalid;
+var envalid = require('envalid');
+var num = envalid.num;
+var str = envalid.str;
 
 const LOG_LEVELS = [ 'debug', 'info', 'warn', 'error' ];
 
