@@ -1,3 +1,5 @@
+require('./env');
+
 /**
  * This config file is provided as a convenience for development. You can either
  * set the environment variables on your server or modify the values here.
@@ -10,7 +12,7 @@
  ***************************************************/
 
 // Your Firebase instance where we will listen and write search results
-exports.FB_URL   = 'https://' + process.env.FB_NAME + '.firebaseio.com';
+exports.FB_URL   = process.env.FB_URL;
 
 // The path in your Firebase where clients will write search requests
 exports.FB_REQ   = process.env.FB_REQ || 'search/request';
@@ -20,7 +22,7 @@ exports.FB_RES   = process.env.FB_RES || 'search/response';
 
 // See https://firebase.google.com/docs/server/setup. for how to
 // auto-generate this config json ...
-exports.FB_SERVICEACCOUNT = process.env.FB_SERVICEJSONPATH;
+exports.FB_SERVICEACCOUNT = process.env.FB_SERVICEACCOUNT;
 
 /** ElasticSearch Settings
  *********************************************/
@@ -62,16 +64,9 @@ else {
 
 exports.paths = [
    {
-      path:  "users",
-      index: "firebase",
+      path:  "providersSearch",
+      index: "providers",
       type:  "user"
-   },
-   {
-      path:  "messages",
-      index: "firebase",
-      type:  "message",
-      fields: ['msg', 'name'],
-      filter: function(data) { return data.name !== 'system'; }
    }
 ];
 

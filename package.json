@@ -17,6 +17,7 @@
     "colors": "~0.6.2",
     "elastic.js": "^1.2.0",
     "elasticsearch": "^10.0.1",
+    "envalid": "^2.4.0",
     "firebase": "^3.5.0"
   }
 }
