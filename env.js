@@ -2,12 +2,10 @@ var envalid = require('envalid');
 var num = envalid.num;
 var str = envalid.str;
 
-const LOG_LEVELS = [ 'debug', 'info', 'warn', 'error' ];
-
-export const env = envalid.cleanEnv(process.env, {
+module.exports = envalid.cleanEnv(process.env, {
   FB_URL: str({ desc: 'Firebase URL' }),
   FB_SERVICEACCOUNT: str({ desc: 'Firebase service account configuration in JSON format.' }),
-  BONSAI_URL: str({ desc: 'Heroku Bonsai ElasticSearch addon URL' }),
+  BONSAI_URL: str({ desc: 'Heroku Bonsai ElasticSearch addon URL' })
 
   /*
   // Papertrail log settings
