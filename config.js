@@ -63,8 +63,8 @@ else {
 exports.paths = [
    {
       path:  "providersSearch",
-      index: "providers",
-      type:  "user"
+      index: "firebase",
+      type:  "provider"
    }
 ];
 
