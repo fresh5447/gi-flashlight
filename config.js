@@ -1,5 +1,3 @@
-require('./env');
-
 /**
  * This config file is provided as a convenience for development. You can either
  * set the environment variables on your server or modify the values here.
